@@ -15,6 +15,7 @@ var env = {{#if_or unit e2e}}process.env.NODE_ENV === 'testing'
   : {{/if_or}}config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
+  watch: process.env.WEBPACK_WATCH === 'true',
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
