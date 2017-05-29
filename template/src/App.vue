@@ -1,65 +1,40 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      {{#router}}
-      <router-view></router-view>
-      {{else}}
-      <hello></hello>
-      {{/router}}
-    </main>
-  </div>
+  <v-ons-page id="app">
+    <v-ons-splitter>
+      <v-ons-splitter-side swipeable collapse width="250px"
+        :animation="$ons.platform.isAndroid() ? 'overlay' : 'reveal'"
+        :open.sync="menuIsOpen">
+        <menu-page></menu-page>
+      </v-ons-splitter-side>
+
+      <v-ons-splitter-content>
+        <home-page @toggleMenu="menuIsOpen = !menuIsOpen"></home-page>
+      </v-ons-splitter-content>
+    </v-ons-splitter>
+  </v-ons-page>
 </template>
 
 <script>
-{{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HomePage from './components/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './components/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-{{/unless}}
 export default {
-  name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
+  name: 'app',
+  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
+    return {
+      menuIsOpen: false{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  },
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
+    HomePage,
+    MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #4fc08d;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+ons-splitter-side[side=left][animation=overlay] {
+  border-right: 1px solid #BBB;
 }
 </style>
