@@ -1,4 +1,4 @@
-# vue-pwa-boilerplate
+# vue-pwa-webpack
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
@@ -8,13 +8,15 @@
 
 - Check out the [official Vue.js guide](http://vuejs.org/guide/) for general information about Vue that is not specific to this template.
 
+- [Onsen UI official guide](https://onsen.io/v2/guide) for any question about the UI components.
+
 ## Usage
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ or [yarn](https://yarnpkg.com) for a more efficient dependency tree.**
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init pwa my-project
+$ vue init OnsenUI/vue-pwa-webpack my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -44,7 +46,7 @@ If port 8080 is already in use on your machine you must change the port number i
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
   - Use `npm run build --report`to build with bundle size analytics.
 
-- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
+- `npm run unit`: Unit tests run in Google Chrome headless with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
   - Supports ES2015+ in test files.
   - Supports all webpack loaders.
   - Easy mock injection.
