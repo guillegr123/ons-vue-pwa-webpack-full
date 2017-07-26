@@ -32,8 +32,7 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 ons-splitter-side[side=left][animation=overlay] {
   border-right: 1px solid #BBB;
 }
