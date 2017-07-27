@@ -2,7 +2,7 @@
   <v-ons-page>
     <v-ons-toolbar class="home-toolbar">
       <div class="left">
-        <v-ons-toolbar-button @click="$emit('toggleMenu')">
+        <v-ons-toolbar-button @click="{{#if vuex}}$store.commit('splitter/toggle'){{else}}$emit('toggleMenu'){{/if}}">
           <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>
         </v-ons-toolbar-button>
       </div>

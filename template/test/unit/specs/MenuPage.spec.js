@@ -11,6 +11,7 @@ describe('MenuPage.vue', () => {
 
   it('opens a new tab when clicking an item', () => {
     const stub = sinon.stub(window, 'open'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    stub.returns({}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
     // Click on the first item
     vm.$el.querySelectorAll('ons-list-item')[0].click(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

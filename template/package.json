@@ -17,7 +17,8 @@
   "dependencies": {
     "onsenui": "~2.5.1",
     "vue": "^2.4.0",
-    "vue-onsenui": "~2.1.0"
+    "vue-onsenui": "~2.1.0"{{#vuex}},
+    "vuex": "^2.3.1"{{/vuex}}
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
