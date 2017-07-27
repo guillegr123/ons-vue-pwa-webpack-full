@@ -10,7 +10,7 @@
     </v-ons-toolbar>
 
     <div class="header">
-      <img src="../assets/logo.png">
+      <img src="../assets/logo.png" alt="vue-logo">
     </div>
 
     <v-ons-list-title>Vue.js Essential Links</v-ons-list-title>
