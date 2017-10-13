@@ -56,8 +56,8 @@ export default {
           icon: 'fa-book'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         },
         {
-          label: 'Gitter Chat',
-          link: 'https://gitter.im/vuejs/vue',
+          label: 'Community Chat',
+          link: 'https://chat.vuejs.org',
           icon: 'fa-commenting'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         },
         {
