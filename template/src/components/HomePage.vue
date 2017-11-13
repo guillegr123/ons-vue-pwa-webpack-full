@@ -98,6 +98,10 @@ img {
   max-width: 300px;
 }
 
+ons-list-title {
+  text-transform: none;
+}
+
 ons-list-title:not(:first-of-type) {
   margin-top: 30px;
 }

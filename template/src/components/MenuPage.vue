@@ -70,6 +70,10 @@ img {
   max-width: 150px;
 }
 
+ons-list-title {
+  text-transform: none;
+}
+
 ons-list-item {
   cursor: pointer;
 }
