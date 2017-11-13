@@ -15,9 +15,9 @@
     "lint": "eslint --ext .js,.vue src{{#unit}} test/unit/specs{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}"{{/lint}}
   },
   "dependencies": {
-    "onsenui": "~2.6.1",
+    "onsenui": "~2.7.2",
     "vue": "^2.5.0",
-    "vue-onsenui": "~2.2.1"{{#vuex}},
+    "vue-onsenui": "~2.3.0"{{#vuex}},
     "vuex": "^3.0.0"{{/vuex}}
   },
   "devDependencies": {
