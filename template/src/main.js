@@ -2,7 +2,9 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
-import 'onsenui/css/onsenui.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+import 'font-awesome/css/font-awesome.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import 'onsenui/css/onsenui-core.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import 'onsenui/css/onsen-css-components.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

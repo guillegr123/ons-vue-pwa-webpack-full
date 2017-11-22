@@ -15,7 +15,8 @@
     "lint": "eslint --ext .js,.vue src{{#unit}} test/unit/specs{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}"{{/lint}}
   },
   "dependencies": {
-    "onsenui": "~2.8.1",
+    "font-awesome": "^4.7.0",
+    "onsenui": "~2.8.2",
     "vue": "^2.5.2",
     "vue-onsenui": "~2.4.2"{{#vuex}},
     "vuex": "^3.0.0"{{/vuex}}
