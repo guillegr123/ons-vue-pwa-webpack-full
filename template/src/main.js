@@ -6,7 +6,8 @@ import 'onsenui/css/onsenui.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import 'onsenui/css/onsen-css-components.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import VueOnsen from 'vue-onsenui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import $ons from 'vue-onsenui/esm'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import * as VOns from './vue-onsen-components'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
 import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
@@ -14,7 +15,8 @@ import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-Vue.use(VueOnsen){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use($ons){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Object.values(VOns).forEach(comp => Vue.component(comp.name, comp)){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
 new Vue({
