@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import HomePage from './components/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import MenuPage from './components/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HomePage from './pages/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './pages/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 export default {
   name: 'app',

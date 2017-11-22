@@ -3,7 +3,7 @@
     <v-ons-toolbar class="home-toolbar">
       <div class="left">
         <v-ons-toolbar-button @click="{{#if vuex}}$store.commit('splitter/toggle'){{else}}$emit('toggleMenu'){{/if}}">
-          <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>
+          <v-ons-icon icon="fa-bars"></v-ons-icon>
         </v-ons-toolbar-button>
       </div>
       <div class="center">\{{ msg }}</div>
@@ -63,7 +63,7 @@ export default {
         {
           label: 'Forum',
           link: 'https://forum.vuejs.org',
-          icon: 'ion-chatboxes'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+          icon: 'fa-comments'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         },
         {
           label: 'Twitter',

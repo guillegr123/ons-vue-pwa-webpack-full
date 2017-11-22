@@ -34,7 +34,7 @@ export default {
         {
           label: 'Forum',
           link: 'https://community.onsen.io',
-          icon: 'ion-chatboxes'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+          icon: 'fa-comments'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         },
         {
           label: 'Twitter',

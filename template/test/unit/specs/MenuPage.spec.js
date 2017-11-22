@@ -1,5 +1,5 @@
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import MenuPage from '@/components/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from '@/pages/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 describe('MenuPage.vue', () => {
   const Constructor = Vue.extend(MenuPage){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

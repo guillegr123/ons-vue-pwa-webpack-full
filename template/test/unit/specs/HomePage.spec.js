@@ -1,5 +1,5 @@
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import HomePage from '@/components/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HomePage from '@/pages/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 describe('HomePage.vue', () => {
   const Constructor = Vue.extend(HomePage){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
@@ -25,4 +25,3 @@ describe('HomePage.vue', () => {
     stub.restore(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-
