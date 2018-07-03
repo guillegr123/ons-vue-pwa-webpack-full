@@ -15,8 +15,10 @@
   </v-ons-page>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+const Component = Vue.extend({
   name: 'menu',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
@@ -56,7 +58,9 @@ export default {
       newWindow.location = url{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+export default Component{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -11,7 +11,7 @@ import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import $ons from 'vue-onsenui/esm'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import * as VOns from './vue-onsen-components'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
-import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import store from './store.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
 import App from './App.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 

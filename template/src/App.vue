@@ -15,6 +15,8 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
 import HomePage from './pages/HomePage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
