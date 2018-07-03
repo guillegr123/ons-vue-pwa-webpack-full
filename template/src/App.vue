@@ -14,11 +14,13 @@
   </v-ons-page>
 </template>
 
-<script>
-import HomePage from './pages/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import MenuPage from './pages/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+<script lang="ts">
+import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-export default {
+import HomePage from './pages/HomePage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+const Component = Vue.extend({
   name: 'app',
 {{#if vuex}}
   computed: {
@@ -42,7 +44,9 @@ export default {
     HomePage,
     MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+export default Component{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
 <style>
