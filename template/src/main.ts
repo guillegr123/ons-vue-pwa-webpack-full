@@ -13,7 +13,7 @@ import * as VOns from './vue-onsen-components'{{#if_eq lintConfig "airbnb"}};{{/
 {{#vuex}}
 import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
-import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import App from './App.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 // Import Vue types
 import { Vue as _Vue } from "vue/types/vue"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
