@@ -15,10 +15,30 @@ import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+// Import Vue types
+import { Vue as _Vue } from "vue/types/vue"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import { PluginFunction } from "vue/types/plugin"{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-Vue.use($ons){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Object.values(VOns).forEach(comp => Vue.component(comp.name, comp)){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+// Augment Vue with $ons property
+declare module 'vue/types/vue' {
+  interface Vue {
+    $ons: string
+  }
+}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+// Create wrapper plugin function for $ons
+var onsPluginFun: PluginFunction<any> = (Vue: typeof _Vue, options?: any) => {
+  $ons['install'](Vue){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+// Use $ons
+Vue.use(onsPluginFun){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+// Load Onsen UI components
+Object.keys(VOns).map(key=>VOns[key]).forEach(comp => Vue.component(comp.name, comp)){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
 
 /* eslint-disable no-new */
 new Vue({
