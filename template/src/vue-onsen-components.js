@@ -22,7 +22,7 @@ export { default as VOnsListHeader } from 'vue-onsenui/esm/components/VOnsListHe
 export { default as VOnsListItem } from 'vue-onsenui/esm/components/VOnsListItem'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 export { default as VOnsListTitle } from 'vue-onsenui/esm/components/VOnsListTitle'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // export { default as VOnsModal } from 'vue-onsenui/esm/components/VOnsModal'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-// export { default as VOnsNavigator } from 'vue-onsenui/esm/components/VOnsNavigator'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+export { default as VOnsNavigator } from 'vue-onsenui/esm/components/VOnsNavigator'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 export { default as VOnsPage } from 'vue-onsenui/esm/components/VOnsPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // export { default as VOnsPopover } from 'vue-onsenui/esm/components/VOnsPopover'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // export { default as VOnsProgressBar } from 'vue-onsenui/esm/components/VOnsProgressBar'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

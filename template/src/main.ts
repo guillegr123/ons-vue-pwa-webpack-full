@@ -8,11 +8,13 @@ import 'onsenui/css/onsenui-core.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import 'onsenui/css/onsen-css-components.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import $ons from 'vue-onsenui/esm'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import * as VOns from './vue-onsen-components'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
 import store from './store.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
+import router from './router.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 // Import Vue types
@@ -39,6 +41,8 @@ Vue.use(onsPluginFun){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // Load Onsen UI components
 Object.keys(VOns).map(key=>VOns[key]).forEach(comp => Vue.component(comp.name, comp)){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+// Use vue-router
+Vue.use(VueRouter){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
 new Vue({
@@ -46,6 +50,7 @@ new Vue({
   {{#vuex}}
   store,
   {{/vuex}}
+  router,
   {{#if_eq build "runtime"}}
   render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   {{/if_eq}}

@@ -83,7 +83,6 @@ const Component = Vue.extend({
   methods: {
     goTo{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}(url) {
       const newWindow = window.open(url, '_blank'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-      newWindow.opener = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       newWindow.location = url{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}

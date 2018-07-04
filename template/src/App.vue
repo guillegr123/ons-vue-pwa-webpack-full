@@ -8,7 +8,7 @@
       </v-ons-splitter-side>
 
       <v-ons-splitter-content>
-        <home-page{{#unless vuex}} @toggleMenu="menuIsOpen = !menuIsOpen"{{/unless}}></home-page>
+        <nav-page{{#unless vuex}} @toggleMenu="menuIsOpen = !menuIsOpen"{{/unless}}></nav-page>
       </v-ons-splitter-content>
     </v-ons-splitter>
   </v-ons-page>
@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-import HomePage from './pages/HomePage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import NavPage from './pages/NavPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 const Component = Vue.extend({
@@ -41,7 +41,7 @@ const Component = Vue.extend({
   },
 {{/if}}
   components: {
-    HomePage,
+    NavPage,
     MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
