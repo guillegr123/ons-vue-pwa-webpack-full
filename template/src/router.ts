@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import HomePage from './pages/HomePage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MoviesPage from './pages/MoviesPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import store from './store.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 const routes = [
@@ -11,7 +12,7 @@ const routes = [
   {
     name: 'movies',
     path: '/movies',
-    component: HomePage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    component: MoviesPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 ]
 

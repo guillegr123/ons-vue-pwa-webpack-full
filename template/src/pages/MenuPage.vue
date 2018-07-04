@@ -5,6 +5,14 @@
       <img src="../assets/onsenui-logo.png" alt="onsenui-logo">
     </div>
 
+    <v-ons-list-title>Internal links</v-ons-list-title>
+    <v-ons-list>
+      <v-ons-list-item modifier="chevron" v-for="item in internalLinks" @click="goToInternal(item.link)" :key="item.link">
+        <div class="left"><v-ons-icon fixed-width :icon="item.icon"></v-ons-icon></div>
+        <div class="center">\{{ item.label }}</div>
+      </v-ons-list-item>
+    </v-ons-list>
+
     <v-ons-list-title>Onsen UI Essential Links</v-ons-list-title>
     <v-ons-list>
       <v-ons-list-item modifier="chevron" v-for="item in essentialLinks" @click="goTo(item.link)" :key="item.link">
@@ -48,6 +56,18 @@ const Component = Vue.extend({
           link: 'https://tutorial.onsen.io/',
           icon: 'fa-graduation-cap'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      ],
+      internalLinks: [
+        {
+          label: 'Home',
+          link: '/',
+          icon: 'fa-book'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+        },
+        {
+          label: 'Movies',
+          link: '/movies',
+          icon: 'fa-commenting'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+        }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   },
@@ -56,6 +76,9 @@ const Component = Vue.extend({
       const newWindow = window.open(url, '_blank'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       newWindow.opener = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       newWindow.location = url{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    },
+    goToInternal{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}(path) {
+      this.$router.replace(path){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
