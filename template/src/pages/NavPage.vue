@@ -9,20 +9,20 @@
 
 <script lang="ts">
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 const Component = Vue.extend({
   name: 'nav',
   computed: {
     ...mapGetters('navigator', [
-      'pageStack'
+      'pageStack'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     ]){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   },
   methods: {
     /* Override default pop behavior and delegate it to the router */
-    goBack () {
+    goBack{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
       // Go to the parent route component
-      this.$router.push({ name: this.$route.matched[this.$route.matched.length - 2].name })
+      this.$router.push({ name: this.$route.matched[this.$route.matched.length - 2].name }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
       // this.$router.go(-1); // Could work but might be misleading in some situations
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}

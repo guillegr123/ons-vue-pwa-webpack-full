@@ -17,8 +17,8 @@
 <script lang="ts">
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-import NavPage from './pages/NavPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import NavPage from './pages/NavPage{{#unless_eq lintConfig "airbnb"}}.vue{{/unless_eq}}'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './pages/MenuPage{{#unless_eq lintConfig "airbnb"}}.vue{{/unless_eq}}'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 const Component = Vue.extend({
   name: 'app',
