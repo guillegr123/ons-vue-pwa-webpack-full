@@ -2,7 +2,7 @@
   <v-ons-page>
     <v-ons-toolbar class="home-toolbar">
       <div class="left">
-        <v-ons-toolbar-button @click="{{#if vuex}}$store.commit('splitter/toggle'){{else}}$emit('toggleMenu'){{/if}}">
+        <v-ons-toolbar-button @click="$store.commit('splitter/toggle')">
           <v-ons-icon icon="fa-bars"></v-ons-icon>
         </v-ons-toolbar-button>
       </div>
@@ -83,7 +83,6 @@ const Component = Vue.extend({
   methods: {
     goTo{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}(url) {
       const newWindow = window.open(url, '_blank'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-      newWindow.opener = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
       newWindow.location = url{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}

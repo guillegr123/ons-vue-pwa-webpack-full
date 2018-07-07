@@ -8,7 +8,7 @@
       </v-ons-splitter-side>
 
       <v-ons-splitter-content>
-        <home-page{{#unless vuex}} @toggleMenu="menuIsOpen = !menuIsOpen"{{/unless}}></home-page>
+        <nav-page></nav-page>
       </v-ons-splitter-content>
     </v-ons-splitter>
   </v-ons-page>
@@ -17,12 +17,11 @@
 <script lang="ts">
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-import HomePage from './pages/HomePage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import NavPage from './pages/NavPage{{#unless_eq lintConfig "airbnb"}}.vue{{/unless_eq}}'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './pages/MenuPage{{#unless_eq lintConfig "airbnb"}}.vue{{/unless_eq}}'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 const Component = Vue.extend({
   name: 'app',
-{{#if vuex}}
   computed: {
     menuIsOpen: {
       get{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
@@ -33,15 +32,8 @@ const Component = Vue.extend({
       }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   },
-{{else}}
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-    return {
-      menuIsOpen: false{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  },
-{{/if}}
   components: {
-    HomePage,
+    NavPage,
     MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

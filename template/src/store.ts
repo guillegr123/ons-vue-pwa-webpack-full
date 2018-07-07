@@ -22,6 +22,32 @@ export default new Vuex.Store({
           }
         }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    },
+    navigator: {
+      namespaced: true,
+      state: {
+        stack: []{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      },
+      getters: {
+        pageStack: state => state.stack{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      },
+      mutations: {
+        push (state, page) {
+          state.stack.push(page){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        },
+        pop (state) {
+          if (state.stack.length > 1) {
+            state.stack.pop(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+          }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        },
+        replace (state, page) {
+          state.stack.pop(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+          state.stack.push(page){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        },
+        reset (state, page) {
+          state.stack = Array.isArray(page) ? page : [page || state.stack[0]]{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+        }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
