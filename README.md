@@ -1,10 +1,10 @@
-# vue-pwa-webpack
+# ons-vue-pwa-webpack-full
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
 ## Documentation
 
-- This template builds on top of the main webpack template, so please refer to the [webpack template docs](http://vuejs-templates.github.io/webpack).
+- This template builds on top of the Onsen UI Vue webpack template, so please refer to the [template docs](https://github.com/OnsenUI/vue-pwa-webpack).
 
 - Check out the [official Vue.js guide](http://vuejs.org/guide/) for general information about Vue that is not specific to this template.
 
@@ -16,7 +16,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init OnsenUI/vue-pwa-webpack my-project
+$ vue init guillegr123/ons-vue-pwa-webpack-full my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -31,6 +31,10 @@ If port 8080 is already in use on your machine you must change the port number i
 * Web Application Manifest + favicons
 * Mobile-friendly meta-viewport
 * Lighthouse score of 90+/100
+* TypeScript support
+* Routing via Vue Router
+* Vuex for state management, and VOnsNavigator route handling
+* Axios HTTP client
 
 - `npm run dev`: first-in-class development experience.
   - Webpack + `vue-loader` for single file Vue components.
