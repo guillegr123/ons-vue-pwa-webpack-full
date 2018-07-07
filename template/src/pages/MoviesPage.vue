@@ -2,7 +2,7 @@
   <v-ons-page>
     <v-ons-toolbar class="movies-toolbar">
       <div class="left">
-        <v-ons-toolbar-button @click="{{#if vuex}}$store.commit('splitter/toggle'){{else}}$emit('toggleMenu'){{/if}}">
+        <v-ons-toolbar-button @click="$store.commit('splitter/toggle')">
           <v-ons-icon icon="fa-bars"></v-ons-icon>
         </v-ons-toolbar-button>
       </div>

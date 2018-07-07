@@ -11,9 +11,7 @@ import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import $ons from 'vue-onsenui/esm'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import * as VOns from './vue-onsen-components'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-{{#vuex}}
 import store from './store.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-{{/vuex}}
 import router from './router.ts'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import App from './App.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
@@ -47,9 +45,7 @@ Vue.use(VueRouter){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  {{#vuex}}
   store,
-  {{/vuex}}
   router,
   {{#if_eq build "runtime"}}
   render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}

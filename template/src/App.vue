@@ -8,7 +8,7 @@
       </v-ons-splitter-side>
 
       <v-ons-splitter-content>
-        <nav-page{{#unless vuex}} @toggleMenu="menuIsOpen = !menuIsOpen"{{/unless}}></nav-page>
+        <nav-page></nav-page>
       </v-ons-splitter-content>
     </v-ons-splitter>
   </v-ons-page>
@@ -22,7 +22,6 @@ import MenuPage from './pages/MenuPage.vue'{{#if_eq lintConfig "airbnb"}};{{/if_
 
 const Component = Vue.extend({
   name: 'app',
-{{#if vuex}}
   computed: {
     menuIsOpen: {
       get{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
@@ -33,13 +32,6 @@ const Component = Vue.extend({
       }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   },
-{{else}}
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-    return {
-      menuIsOpen: false{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  },
-{{/if}}
   components: {
     NavPage,
     MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
