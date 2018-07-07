@@ -8,6 +8,20 @@ module.exports = {
       return options.inverse(this);
     }
   },
+  /*"metalsmith": {
+    before: function (metalsmith, opts, helpers) {
+      console.log(metalsmith);
+      console.log(opts);
+      console.log(helpers);
+
+      function customMetalsmithPlugin (files, metalsmith, done) {
+        // Implement something really custom here.
+        done(null, files)
+      }
+      
+      metalsmith.use(customMetalsmithPlugin)
+    }
+  },*/
   "prompts": {
     "name": {
       "type": "string",
@@ -49,10 +63,10 @@ module.exports = {
     //   "type": "confirm",
     //   "message": "Install vue-router?"
     // },
-    "vuex": {
+    /*"vuex": {
       "type": "confirm",
       "message": "Install Vuex for state management?"
-    },
+    },*/
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
@@ -99,4 +113,9 @@ module.exports = {
     // "src/router/**/*": "router"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
+  /*"complete": function (data) {
+    console.log(data);
+    data['vuex'] = true;
+    console.log(data);
+  }*/
 };
